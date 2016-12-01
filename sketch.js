@@ -3,21 +3,22 @@ var population;
 
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(600, 600);
   loadJSON(url, gotData);
 }
 
 function gotData(data) {
   population = data;
-  background(0);
+  print(data);
+  background(24, 53, 111);
   for (var i = 0; i < population[i].total; i++) {
     fill(255);
     ellipse(random(width), random(height), 10, 10);
   }
-  print(data);
+
 }
 
 function draw() {
 
-} 
 
+}
